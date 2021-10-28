@@ -12,6 +12,6 @@ A01769961 - Dario - Simple
 JorgeOmarLopezGem - Omar - Edge Detector
 A01769675
 
-Carlos - 
+Carlos - Line detection
 
 Ricardo - 
