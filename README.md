@@ -14,4 +14,4 @@ A01769675
 
 Carlos - Line detection
 
-Ricardo - 
+Ricardo - RichEscalera-main
