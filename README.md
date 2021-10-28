@@ -7,3 +7,7 @@ rez1619 - Hlib
 fernando-resendiz - Fer
 
 A01769961 - Dario
+
+
+JorgeOmarLopezGem - Omar
+A01769675
