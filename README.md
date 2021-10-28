@@ -9,7 +9,7 @@ fernando-resendiz - Fer - Gaussian Blur
 A01769961 - Dario - Simple
 
 
-JorgeOmarLopezGem - Omar
+JorgeOmarLopezGem - Omar - Edge Detector
 A01769675
 
 Carlos - 
