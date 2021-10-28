@@ -12,5 +12,4 @@ image = np.asarray(bytearray(resp.read()), dtype="uint8")
 image = cv2.imdecode(image, cv2.IMREAD_COLOR)
 
 #Metodo Sobel
-filterSobel = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
-metodo_sobel(image, filterSobel, verbose=True)
+metodo_sobel(image, verbose=True)
