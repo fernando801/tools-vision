@@ -4,14 +4,10 @@ import matplotlib.pyplot as plt
 from convolution import convolution
 
 
-def metodo_simple(image, verbose=False):
-    LKernel=int(input("Longitud del kernel que se desea: "))
-    if LKernel % 2 == 0:
-        LKernel = LKernel + 1
-    filtero2=1/(int(LKernel)**2)
-    mat=np.ones((LKernel,LKernel))
+def metodo_simple(image, size, verbose=False):
+    filtero2=1/(int(size)**2)
+    mat=np.ones((size,size))
     filtero = mat*filtero2
-    
     new_image_x = convolution(image,filtero)
 
     if verbose:

@@ -19,15 +19,18 @@ def pad_with(vector, pad_width, iaxis, kwargs):
 
 image = np.pad(image, 50, pad_with, padder=0)
 
+size=int(input("Longitud del kernel que se desea: "))
+if size % 2 == 0:
+    size = size + 1
 #Metodo Sobel
 #El numero debe de ser un numero impar, mayor a 1 (3/5/7 etc)
-metodo_sobel(image, 3, verbose=True)
+metodo_sobel(image, size, verbose=True)
 
 #Metodo Simple
-metodo_simple(image,verbose=True)
+metodo_simple(image, size, verbose=True)
 
 #Gaussian Blur
-gaussian_blur(image, 15, verbose=True)
+gaussian_blur(image, size, 4, verbose=True)
 
 
 

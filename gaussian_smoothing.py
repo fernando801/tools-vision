@@ -20,9 +20,10 @@ def gaussian_kernel(K, sigma, verbose=False):
     
     return M
 
-def gaussian_blur(image, kernel_size, verbose=False):
-    if kernel_size % 2 == 0:
-        kernel_size += 1
-
-    kernel = gaussian_kernel(kernel_size, sigma=math.sqrt(kernel_size), verbose=verbose)
-    return convolution(image, kernel, average=True, verbose=verbose)
+def gaussian_blur(image, kernel_size, sigma, verbose=False):
+    kernel = gaussian_kernel(kernel_size, sigma=sigma)
+    M = convolution(image, kernel, verbose)
+    if verbose:
+        plt.imshow(M, interpolation='none',cmap='gray')
+        plt.title("Gaussian Blur")
+        plt.show()
