@@ -5,7 +5,9 @@ from convolution import convolution
 
 
 def metodo_sobel(image, verbose=False):
-    filter = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
+    vertical = np.array([[1],[2],[1]])
+    horizontal = np.array([[1,0,-1]])
+    filter = vertical*horizontal
     new_image_x = convolution(image, filter, verbose)
 
     if verbose:
