@@ -16,23 +16,7 @@ def metodo_simple(image, verbose=False):
 
     if verbose:
         plt.imshow(new_image_x, cmap='gray')
-        plt.title("Horizontal Edge")
+        plt.title("Simple")
         plt.show()
 
-    new_image_y = convolution(image,filtero)
-
-    if verbose:
-        plt.imshow(new_image_y, cmap='gray')
-        plt.title("Vertical Edge")
-        plt.show()
-
-    gradient_magnitude = np.sqrt(np.square(new_image_x) + np.square(new_image_y))
-
-    gradient_magnitude *= 255.0 / gradient_magnitude.max()
-
-    if verbose:
-        plt.imshow(gradient_magnitude, cmap='gray')
-        plt.title("Gradient Magnitude")
-        plt.show()
-
-    return gradient_magnitude
+    return
