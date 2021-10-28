@@ -42,4 +42,4 @@ if __name__ == '__main__':
 
     image = cv2.imread(args["image"])
     image = gaussian_blur(image, 9, verbose=True)
-    sobel_edge_detection(image, filter, verbose=True)
+    metodo_sobel(image, filter, verbose=True)
