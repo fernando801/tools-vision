@@ -30,9 +30,7 @@ def metodo_sobel(image, filter, verbose=False):
 
     return gradient_magnitude
 
-cap = cv2.VideoCapture("http://example.com/someimage.jpg")
-
-image = cv2.imread(cap)
+image = cv2.VideoCapture("http://example.com/someimage.jpg")
 
 filter = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
 
