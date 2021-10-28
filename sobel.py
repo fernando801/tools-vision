@@ -16,6 +16,7 @@ def metodo_sobel(image, size, verbose=False):
         while size > 3:
             horizontal2 = np.array([[1,2,1]])
             filter = signal.convolve2d(vertical*horizontal2, filter)
+            print("Kernel para Metodo Sobel : ")
             print(filter)
             size = size - 2
     new_image_x = convolution(image, filter, verbose)
