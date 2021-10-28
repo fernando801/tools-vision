@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from convolution import convolution
 
-
+#creates kernel
 def gaussian_kernel(K, sigma, verbose=False):
     M = np.zeros((K,K))
     mid = K // 2
@@ -19,6 +19,7 @@ def gaussian_kernel(K, sigma, verbose=False):
     
     return M
 
+#uses convolution with gaussian kernel
 def gaussian_blur(image, kernel_size, sigma, verbose=False):
     kernel = gaussian_kernel(kernel_size, sigma=sigma, verbose=verbose)
     conv_img = convolution(image, kernel)
