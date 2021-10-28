@@ -29,13 +29,3 @@ def gaussian_kernel(size, sigma=1, verbose=False):
 def gaussian_blur(image, kernel_size, verbose=False):
     kernel = gaussian_kernel(kernel_size, sigma=math.sqrt(kernel_size), verbose=verbose)
     return convolution(image, kernel, average=True, verbose=verbose)
-
-
-if __name__ == '__main__':
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--image", required=True, help="Path to the image")
-    args = vars(ap.parse_args())
-
-    image = cv2.imread(args["image"])
-
-    gaussian_blur(image, 5, verbose=True)

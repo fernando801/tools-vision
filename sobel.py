@@ -31,15 +31,3 @@ def metodo_sobel(image, filter, verbose=False):
         plt.show()
 
     return gradient_magnitude
-
-
-if __name__ == '__main__':
-    filter = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
-
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--image", required=True, help="Path to the image")
-    args = vars(ap.parse_args())
-
-    image = cv2.imread(args["image"])
-    image = gaussian_blur(image, 9, verbose=True)
-    metodo_sobel(image, filter, verbose=True)
