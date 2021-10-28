@@ -35,7 +35,7 @@ def metodo_sobel(image, size, verbose=False):
     gradient_magnitude = np.sqrt(np.square(new_image_x) + np.square(new_image_y))
 
     gradient_magnitude *= 255.0 / gradient_magnitude.max()
-
+    
     if verbose:
         plt.imshow(gradient_magnitude, cmap='gray')
         plt.title("Gradient Magnitude")
