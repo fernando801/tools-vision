@@ -1,9 +1,7 @@
 import numpy as np
 import cv2
-import argparse
 import matplotlib.pyplot as plt
 from convolution import convolution
-from gaussian_smoothing import gaussian_blur
 
 
 def metodo_sobel(image, filter, verbose=False):
