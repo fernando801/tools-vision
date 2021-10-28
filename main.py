@@ -6,6 +6,7 @@ import math
 from convolution import convolution
 from sobel import metodo_sobel
 from Simple import metodo_simple
+from gaussian_smoothing import gaussian_blur
 import urllib.request as urllib
 
 resp = urllib.urlopen("https://drive.google.com/uc?id=1sbsbRr3qWPex9CRM6qMqgzm8MWemJq4i")
@@ -18,6 +19,9 @@ metodo_sobel(image, 5, verbose=True)
 
 #Metodo Simple
 metodo_simple(image,verbose=True)
+
+#Gaussian Blur
+gaussian_blur(image, 15, verbose=True)
 
 
 
