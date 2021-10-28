@@ -2,11 +2,11 @@ import numpy as np
 import cv2
 import argparse
 import matplotlib.pyplot as plt
-from Computer_Vision.Sobel_Edge_Detection.convolution import convolution
-from Computer_Vision.Sobel_Edge_Detection.gaussian_smoothing import gaussian_blur
+from convolution import convolution
+from gaussian_smoothing import gaussian_blur
 
 
-def sobel_edge_detection(image, filter, verbose=False):
+def metodo_sobel(image, filter, verbose=False):
     new_image_x = convolution(image, filter, verbose)
 
     if verbose:
