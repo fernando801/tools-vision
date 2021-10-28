@@ -8,6 +8,7 @@ from sobel import metodo_sobel
 from Simple import metodo_simple
 from gaussian_smoothing import gaussian_blur
 from metodo_MexicanHat import metodo_MexHat
+from line_detection import line_det
 import urllib.request as urllib
 
 resp = urllib.urlopen("https://drive.google.com/uc?id=1sbsbRr3qWPex9CRM6qMqgzm8MWemJq4i")
@@ -35,4 +36,7 @@ gaussian_blur(image, size, 4, verbose=True)
 
 #Mexican Hat
 metodo_MexHat(image, size, 4, verbose=True)
+
+#Line Detection
+line_det(image, size, verbose=True)
 
