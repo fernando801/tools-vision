@@ -1,12 +1,23 @@
 import numpy as np
 import cv2
-import argparse
 import matplotlib.pyplot as plt
 from convolution import convolution
-from gaussian_smoothing import gaussian_blur
+from scipy import signal
 
 
-def metodo_sobel(image, filter, verbose=False):
+def metodo_sobel(image, size, verbose=False):
+    vertical = np.array([[1],[2],[1]])
+    horizontal = np.array([[1,0,-1]])
+    filter3 = vertical*horizontal
+    if size == 3:
+        filter = filter3
+    else:
+        filter = filter3
+        while size > 3:
+            horizontal2 = np.array([[1,2,1]])
+            filter = signal.convolve2d(vertical*horizontal2, filter)
+            print(filter)
+            size = size - 2
     new_image_x = convolution(image, filter, verbose)
 
     if verbose:
