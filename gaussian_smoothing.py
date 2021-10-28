@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import math
 from convolution import convolution
 
 
@@ -21,7 +20,7 @@ def gaussian_kernel(K, sigma, verbose=False):
     return M
 
 def gaussian_blur(image, kernel_size, sigma, verbose=False):
-    kernel = gaussian_kernel(kernel_size, sigma=sigma)
+    kernel = gaussian_kernel(kernel_size, sigma=sigma, verbose=verbose)
     conv_img = convolution(image, kernel)
     if verbose:
         plt.imshow(conv_img , interpolation='none',cmap='gray')
