@@ -7,6 +7,7 @@ from convolution import convolution
 from sobel import metodo_sobel
 from Simple import metodo_simple
 from gaussian_smoothing import gaussian_blur
+from metodo_MexicanHat import metodo_MexHat
 import urllib.request as urllib
 
 resp = urllib.urlopen("https://drive.google.com/uc?id=1sbsbRr3qWPex9CRM6qMqgzm8MWemJq4i")
@@ -32,5 +33,6 @@ metodo_simple(image, size, verbose=True)
 #Gaussian Blur
 gaussian_blur(image, size, 4, verbose=True)
 
-
+#Mexican Hat
+metodo_MexHat(image, size, 4, verbose=True)
 
