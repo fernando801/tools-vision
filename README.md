@@ -34,4 +34,6 @@ Una vez tenemos el valor del Kernel, viendo las imágenes llegamos a la conclusi
 Line Detection
 
 Main
-El main junta las funciones, Mexican Hat, Line Detection, Gaussian Blir, Sobel y Simple. 
+
+El main junta las funciones, Mexican Hat, Line Detection, Gaussian Blir, Sobel y Simple. Esto importa y ejecuta las funciones en el main pasandole parametros a las funciones y 
+verbose con un la funcion booleana 'True'
