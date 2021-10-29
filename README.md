@@ -2,16 +2,20 @@
 Tool for analyzing and changing an image using different preexisting libraries with Python.
 
 # Teammates
-rez1619 - Hlib - Sobel
+Hlib Korzhynskyy                      A01367464
+Jorge Omar López Gemigniani           A01769675
+Carlos Eduarod Jiménez Santiago       A01769960
+Fernando Reséndiz Bautista            A01769659
+Darío Mejía Castillo                  A01769961
+Ricardo Alejandro Escalera            A01770360
 
-fernando-resendiz - Fer - Gaussian Blur
+# Explicación
+Simple
 
-A01769961 - Dario - Simple
+Sobel
 
+Gaussian Blur
 
-JorgeOmarLopezGem - Omar - Edge Detector
-A01769675
+Mexican Hat
 
-Carlos - Line detection
-
-Ricardo - RichEscalera-main
+Line Detection
