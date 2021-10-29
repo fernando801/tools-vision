@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 
 def convolution(image, kernel, average=False, verbose=False):
+    #Se muestra el tamanio de kernel y el de la imagen
     if len(image.shape) == 3:
         print("Found 3 Channels : {}".format(image.shape))
         image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -18,6 +19,8 @@ def convolution(image, kernel, average=False, verbose=False):
         plt.title("Image")
         plt.show()
 
+    #Se calcula la convulcion con el kernel indicado para poder filtrar la imagen
+
     image_row, image_col = image.shape
     kernel_row, kernel_col = kernel.shape
 
@@ -29,11 +32,6 @@ def convolution(image, kernel, average=False, verbose=False):
     padded_image = np.zeros((image_row + (2 * pad_height), image_col + (2 * pad_width)))
 
     padded_image[pad_height:padded_image.shape[0] - pad_height, pad_width:padded_image.shape[1] - pad_width] = image
-
-    if verbose:
-        plt.imshow(padded_image, cmap='gray')
-        plt.title("Padded Image")
-        plt.show()
 
     for row in range(image_row):
         for col in range(image_col):
