@@ -1,31 +1,30 @@
 import numpy as np
-import cv2
-import argparse
 import matplotlib.pyplot as plt
-import math
 from convolution import convolution
 
-
-def dnorm(x, mu, sd):
-    return 1 / (np.sqrt(2 * np.pi) * sd) * np.e ** (-np.power((x - mu) / sd, 2) / 2)
-
-
-def gaussian_kernel(size, sigma=1, verbose=False):
-    kernel_1D = np.linspace(-(size // 2), size // 2, size)
-    for i in range(size):
-        kernel_1D[i] = dnorm(kernel_1D[i], 0, sigma)
-    kernel_2D = np.outer(kernel_1D.T, kernel_1D.T)
-
-    kernel_2D *= 1.0 / kernel_2D.max()
+#creates kernel
+def gaussian_kernel(K, sigma, verbose=False):
+    M = np.zeros((K,K))
+    mid = K // 2
+    for x in range(K):
+        for y in range(K):
+            X = x - mid
+            Y = y - mid
+            M[x][y] = (1/(2*np.pi*sigma**2)) * np.e ** (-(X**2+Y**2)/(2*sigma**2))
 
     if verbose:
-        plt.imshow(kernel_2D, interpolation='none', cmap='gray')
-        plt.title("Kernel ( {}X{} )".format(size, size))
+        plt.imshow(M, interpolation='none',cmap='gray')
+        plt.title("Image")
         plt.show()
+    
+    return M
 
-    return kernel_2D
-
-
-def gaussian_blur(image, kernel_size, verbose=False):
-    kernel = gaussian_kernel(kernel_size, sigma=math.sqrt(kernel_size), verbose=verbose)
-    return convolution(image, kernel, average=True, verbose=verbose)
+#uses convolution with gaussian kernel
+def gaussian_blur(image, kernel_size, sigma, verbose=False):
+    kernel = gaussian_kernel(kernel_size, sigma=sigma, verbose=verbose)
+    conv_img = convolution(image, kernel)
+    if verbose:
+        plt.imshow(conv_img , interpolation='none',cmap='gray')
+        plt.title("Gaussian Blur")
+        plt.show()
+    return conv_img 

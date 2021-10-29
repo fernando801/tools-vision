@@ -16,6 +16,7 @@ def metodo_sobel(image, size, verbose=False):
         while size > 3:
             horizontal2 = np.array([[1,2,1]])
             filter = signal.convolve2d(vertical*horizontal2, filter)
+            print("Kernel para Metodo Sobel : ")
             print(filter)
             size = size - 2
     new_image_x = convolution(image, filter, verbose)
@@ -35,7 +36,7 @@ def metodo_sobel(image, size, verbose=False):
     gradient_magnitude = np.sqrt(np.square(new_image_x) + np.square(new_image_y))
 
     gradient_magnitude *= 255.0 / gradient_magnitude.max()
-
+    
     if verbose:
         plt.imshow(gradient_magnitude, cmap='gray')
         plt.title("Gradient Magnitude")
