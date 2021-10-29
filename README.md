@@ -26,6 +26,7 @@ Mexican Hat
 
 Explicación Código Mexican Hat
 Las librearías involucradas en este programa son:
+
 -Numpy
 -Cv2
 -Matplotlib
