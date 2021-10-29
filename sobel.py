@@ -6,9 +6,11 @@ from scipy import signal
 
 
 def metodo_sobel(image, size, verbose=False):
+    #Define los parametros iniciales del kernel de 3x3
     vertical = np.array([[1],[2],[1]])
     horizontal = np.array([[1,0,-1]])
     filter3 = vertical*horizontal
+    #Si el kernel es mayor a 3x3, se agrega una funcion que multiplica el kernel para saber el kernel mas grande
     if size == 3:
         filter = filter3
     else:
@@ -19,6 +21,8 @@ def metodo_sobel(image, size, verbose=False):
             print("Kernel para Metodo Sobel : ")
             print(filter)
             size = size - 2
+    
+    #Se convulciona con el kernel indicado y se muestra el resultado, en X y en Y
     new_image_x = convolution(image, filter, verbose)
 
     if verbose:
@@ -33,6 +37,7 @@ def metodo_sobel(image, size, verbose=False):
         plt.title("Vertical Edge")
         plt.show()
 
+    #Se calcula el gradiente
     gradient_magnitude = np.sqrt(np.square(new_image_x) + np.square(new_image_y))
 
     gradient_magnitude *= 255.0 / gradient_magnitude.max()
