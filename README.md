@@ -4,12 +4,17 @@ Tool for analyzing and changing an image using different preexisting libraries w
 # Teammates
 Hlib Korzhynskyy                      A01367464
 Jorge Omar López Gemigniani           A01769675
-Carlos Eduarod Jiménez Santiago       A01769960
+Carlos Eduardo Jiménez Santiago       A01769960
 Fernando Reséndiz Bautista            A01769659
 Darío Mejía Castillo                  A01769961
 Ricardo Alejandro Escalera            A01770360
 
 # Explicación
+Main
+
+El main junta las funciones, Mexican Hat, Line Detection, Gaussian Blir, Sobel y Simple. Esto importa y ejecuta las funciones en el main pasandole parametros a las funciones y 
+verbose con un la funcion booleana 'True'. Optamos por crear cada uno de los integrantes un código para un método diferente, nuestra función main se dedica a importar todos los programas para ejecutarlos, al inicio le preguntará el tamaño del kernel deseado y algo a destacar es que el main a partir de un link de google drive accede a la imagen a la que se le aplicaran los kernerls.
+
 Simple
 
 El modulo Simple.py que utiliza las librerías de librerías numpy, matplotlib y convolution siendo la última creada por nosotros.
@@ -39,8 +44,3 @@ Una vez tenemos el valor del Kernel, viendo las imágenes llegamos a la conclusi
 Line Detection
 
 Para el line detection igualmente se hace uso de las librerías de Python; Numpy, cv2, Matplotlib y convolution; Para line detection se debe establecer previamente un kernel mediante una matriz de 3x3 compuesta únicamente de valores .1 y 2, de los cuales éstos últimos deberán indicar una orientación, la orientación que tengan los valores 2 en la matriz indicarán como kernel que orientación de lineas se busca, es decir, si los valores 2 están alineados en vertical se resaltarán las verticales de la imagen que se reciba y al previamente definir los kernels para las 4 direcciones posibles, se mostrarán 4 imágenes distintas donde será evidente la orientación de las lineas
-
-Main
-
-El main junta las funciones, Mexican Hat, Line Detection, Gaussian Blir, Sobel y Simple. Esto importa y ejecuta las funciones en el main pasandole parametros a las funciones y 
-verbose con un la funcion booleana 'True'
