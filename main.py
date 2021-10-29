@@ -11,9 +11,12 @@ from metodo_MexicanHat import metodo_MexHat
 from line_detection import line_det
 import urllib.request as urllib
 
+#Lee la imagen desde el internet y lo convierte a una matriz
 resp = urllib.urlopen("https://drive.google.com/uc?id=1sbsbRr3qWPex9CRM6qMqgzm8MWemJq4i")
 image = np.asarray(bytearray(resp.read()), dtype="uint8")
 image = cv2.imdecode(image, cv2.IMREAD_GRAYSCALE)
+
+#Agrega un padding de 50 pixeles a la imagen de todos los lados
 def pad_with(vector, pad_width, iaxis, kwargs):
         pad_value = kwargs.get('padder', 10)
         vector[:pad_width[0]] = pad_value
@@ -25,7 +28,6 @@ size=int(input("Longitud del kernel que se desea: "))
 if size % 2 == 0:
     size = size + 1
 #Metodo_Sobel
-#El numero debe de ser un numero impar, mayor a 1 (3/5/7 etc)
 metodo_sobel(image, size, verbose=True)
 
 #Metodo_Simple
