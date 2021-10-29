@@ -25,13 +25,8 @@ Gaussian Blur
 Mexican Hat
 
 Explicación Código Mexican Hat
-Las librearías involucradas en este programa son:
-
--Numpy
--Cv2
--Matplotlib
--Math
--Convolution (Una librería la cual nos ayudaría a realizar la convolución una vez tuviéramos el Kernel).
+Las librearías involucradas en este programa son:Numpy,Cv2,Matplotlib,Math.
+Convolution (Una librería la cual nos ayudaría a realizar la convolución una vez tuviéramos el Kernel).
 La forma de realizar este código para este método es muy parecida a la forma del código del método “Gaussian Blur”, para evitarnos de problemas, empezamos desde la mitad, tomando a “x” y “y” en el medio de la imagen. Una vez ya teníamos definido el rango que cubrirá “x” y “y” de acuerdo con los parámetros recibidos, en el programa calculamos el valor de nuestro Kernel, basándonos en la forma de la ecuación del método Mexican Hat.
 Una vez tenemos el valor del Kernel, viendo las imágenes llegamos a la conclusión de que el resultado se parecía al programa del método “Gaussian Blur”, se parecen, pero no son iguales, para probarlo, en ambos programas imprimimos el Kernel de los mismos para comprobar que el Kernel varía de acuerdo al método. Una vez calculamos nuestro Kernel, realizamos la convolución de la misma imagen con el Kernel y al final solo mostramos nuestra imagen.
 
