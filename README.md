@@ -23,6 +23,8 @@ https://github.com/adeveloperdiary/blog/tree/master/Computer_Vision/Sobel_Edge_D
 
 Gaussian Blur
 
+El módulo de gaussian_smoothing.py utiliza las librerías numpy, matplotlib y convolution. Cuenta con una función gaussian_kernerl que toma como argumento el tamaño, la desviación estándar y la opción verbose para generar el kernel. Esta función devuelve el kernel como matriz y lo grafica en caso de que la opción verbose sea igual a True. Cuenta con otra función gaussian_blur que toma como parámetro la imagen, el tamaño del kernel, la desviación estándar y la opción verbose para generar la convolución. Esta función devuelve la convolución como matriz y la grafica en caso de que la opción verbose sea igual a True.
+
 Mexican Hat
 
 Explicación Código Mexican Hat
