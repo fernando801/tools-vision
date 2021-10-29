@@ -19,6 +19,7 @@ El programa primero calcula el kernel usando multiplicacion de matrizes, y luego
 Tambien en el programa esta la magnitud del gradiente, otro operador enfatizando los bordes de una imagen, pero usando gradientes
 La convolucion es una integral que expresa el area de una funcion en el otra. Se usa para ver cuanto es que una funcion esta en otra, y mezcla una funcion con la otra
 La convolucion tiene otro significado el cual es el kernel (matriz de convolucion), que tiene como objetivo el afilado, desenfoque, y cambio de una imagen con respecto a las especificaciones de una matriz, que permitira procesar la imagen. Es por eso que el kernel cambia de operador a operador.
+https://github.com/adeveloperdiary/blog/tree/master/Computer_Vision/Sobel_Edge_Detection
 
 Gaussian Blur
 
