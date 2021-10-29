@@ -13,6 +13,7 @@ Ricardo Alejandro Escalera            A01770360
 Simple
 
 Sobel
+
 El Operador Sobel es un operador que enfatiza los bordes de una imagen, teniendo un operador de tipo vertical que enfatiza mas cambios verticales, y un operador horizontal enfatizando cambios horizontales.
 El programa primero calcula el kernel usando multiplicacion de matrizes, y luego usa un for loop para hacer un kernel de mayor magnitud a 3.
 Tambien en el programa esta la magnitud del gradiente, otro operador enfatizando los bordes de una imagen, pero usando gradientes
@@ -22,6 +23,7 @@ La convolucion tiene otro significado el cual es el kernel (matriz de convolucio
 Gaussian Blur
 
 Mexican Hat
+
 Explicación Código Mexican Hat
 Las librearías involucradas en este programa son:
 -Numpy
