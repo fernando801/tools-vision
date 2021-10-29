@@ -38,6 +38,8 @@ Una vez tenemos el valor del Kernel, viendo las imágenes llegamos a la conclusi
 
 Line Detection
 
+Para el line detection igualmente se hace uso de las librerías de Python; Numpy, cv2, Matplotlib y convolution; Para line detection se debe establecer previamente un kernel mediante una matriz de 3x3 compuesta únicamente de valores .1 y 2, de los cuales éstos últimos deberán indicar una orientación, la orientación que tengan los valores 2 en la matriz indicarán como kernel que orientación de lineas se busca, es decir, si los valores 2 están alineados en vertical se resaltarán las verticales de la imagen que se reciba y al previamente definir los kernels para las 4 direcciones posibles, se mostrarán 4 imágenes distintas donde será evidente la orientación de las lineas
+
 Main
 
 El main junta las funciones, Mexican Hat, Line Detection, Gaussian Blir, Sobel y Simple. Esto importa y ejecuta las funciones en el main pasandole parametros a las funciones y 
