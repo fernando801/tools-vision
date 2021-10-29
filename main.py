@@ -25,7 +25,6 @@ size=int(input("Longitud del kernel que se desea: "))
 if size % 2 == 0:
     size = size + 1
 #Metodo Sobel
-#El numero debe de ser un numero impar, mayor a 1 (3/5/7 etc)
 metodo_sobel(image, size, verbose=True)
 
 #Metodo Simple
