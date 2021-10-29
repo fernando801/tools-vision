@@ -24,19 +24,19 @@ image = np.pad(image, 50, pad_with, padder=0)
 size=int(input("Longitud del kernel que se desea: "))
 if size % 2 == 0:
     size = size + 1
-#Metodo Sobel
+#Metodo_Sobel
 #El numero debe de ser un numero impar, mayor a 1 (3/5/7 etc)
 metodo_sobel(image, size, verbose=True)
 
-#Metodo Simple
+#Metodo_Simple
 metodo_simple(image, size, verbose=True)
 
-#Gaussian Blur
+#Gaussian_Blur
 gaussian_blur(image, size, 4, verbose=True)
 
-#Mexican Hat
+#Mexican_Hat
 metodo_MexHat(image, size, 4, verbose=True)
 
-#Line Detection
+#Line_Detection
 line_det(image, size, verbose=True)
 
