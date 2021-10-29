@@ -12,6 +12,9 @@ Ricardo Alejandro Escalera            A01770360
 # Explicación
 Simple
 
+El modulo Simple.py que utiliza las librerías de librerías numpy, matplotlib y convolution siendo la última creada por nosotros.
+Se implementa en el código la función llamada método_simple el cual se encarga de pedir 3 argumentos correspondientes a image, size, verbose=False para no romper la estructura de los otros Kernel esta funcion nos permite calcular el Kernel mediante la creación de una matriz de unos de tamaño del size que es pedido anterior y previamente el Kernel usado es 1/size^2 y así mediante la convolución y el Kernel ya obtenido despliega los efectos en la imagen.
+
 Sobel
 
 El Operador Sobel es un operador que enfatiza los bordes de una imagen, teniendo un operador de tipo vertical que enfatiza mas cambios verticales, y un operador horizontal enfatizando cambios horizontales.
